@@ -38,6 +38,9 @@ locate PACKAGE."
      (message "Couldn't install package `%s': %S" package err)
      nil)))
 
+(dolist (package '(use-package))
+   (unless (package-installed-p package)
+     (package-install package)))
 
 (require-package 'fullframe)
 (fullframe list-packages quit-window)

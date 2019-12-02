@@ -17,16 +17,20 @@
 (require 'init-nxml)
 
 (provide 'init)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (fullframe use-package flycheck elpy))))
+ '(column-number-mode t)
+ '(package-selected-packages
+   (quote
+    (use-package po-mode yaml-mode whitespace-cleanup-mode fullframe flycheck elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
-
+ '(default ((t (:family "Fira Mono" :foundry "CTDB" :slant normal :weight normal :height 151 :width normal)))))
