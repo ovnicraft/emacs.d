@@ -13,8 +13,6 @@
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
-(warn "melpa stable o no stable ?? FIXME ")
-
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -23,6 +21,9 @@
 
 (require 'init-core)
 (require 'init-packages)
+(require 'init-ido)
+(require 'init-company)
+(require 'init-magit)
 (require 'init-flycheck)
 (require 'init-elpy)
 (require 'init-whitespace)
@@ -39,7 +40,9 @@
  '(column-number-mode t)
  '(package-selected-packages
    (quote
-    (use-package po-mode yaml-mode whitespace-cleanup-mode fullframe flycheck elpy))))
+    (idomenu ido-ubiquitous dired-sort dired+ quelpa-use-package use-package-el-get yaml-mode whitespace-cleanup-mode use-package smex po-mode org-plus-contrib org-mime fullframe flycheck elpy bbdb))))
+
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

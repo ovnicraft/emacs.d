@@ -1,7 +1,7 @@
 ;;; package -- Summary
 
 ;;; Commentary:
-
+(require-package 'elpy)
 (require 'elpy)
 (require 'blacken)
 

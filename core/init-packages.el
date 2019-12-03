@@ -3,13 +3,12 @@
 ;;; Commentary:
 
 ;;; Code:
-(require 'cl)
 
 (setq package-enable-at-startup nil)
 (package-initialize)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(warn "Melpa is commented out, uncomment to install.")
+;;;(warn "Melpa is commented out, uncomment to install.")
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (defun require-package (package &optional min-version no-refresh)
@@ -42,9 +41,7 @@ locate PACKAGE."
 
 
 (require-package 'fullframe)
-;;; (require-package 'flycheck)
 
-(map 'vector (lambda (package) (require-package package)) (vector "flycheck" "elpy"))
 
 (fullframe list-packages quit-window)
 
