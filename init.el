@@ -7,6 +7,18 @@
 (package-initialize)
 
 (require 'package)
+
+(add-to-list 'package-archives
+             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+
+(warn "melpa stable o no stable ?? FIXME ")
+
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (add-to-list 'load-path (expand-file-name "core" user-emacs-directory))
 
 (require 'init-core)

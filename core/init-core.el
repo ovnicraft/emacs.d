@@ -2,6 +2,8 @@
 
 ;;; Commentary:
 
+;;; move to settings FIXME
+
 ;;; Code:
 
 (global-set-key (kbd "RET") 'newline-and-indent)
@@ -19,3 +21,5 @@
 (load-theme 'dracula t)
 
 (provide 'init-core)
+
+;;; init-core.el ends here
