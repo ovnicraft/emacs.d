@@ -3,6 +3,7 @@
 ;;; Commentary:
 
 ;;; Code:
+(require 'cl)
 
 (setq package-enable-at-startup nil)
 (package-initialize)
