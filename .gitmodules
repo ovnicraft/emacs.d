@@ -1,0 +1,4 @@
+[submodule "themes/dracula"]
+	path = themes/dracula
+	url = git@github.com:dracula/emacs.git
+	branch = master
