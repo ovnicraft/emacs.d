@@ -7,6 +7,10 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(warn "Melpa is commented out, uncomment to install.")
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (defun require-package (package &optional min-version no-refresh)
   "Install given PACKAGE, optionally requiring MIN-VERSION.
 If NO-REFRESH is non-nil, the available package lists will not be
@@ -35,7 +39,12 @@ locate PACKAGE."
      (message "Couldn't install package `%s': %S" package err)
      nil)))
 
+
 (require-package 'fullframe)
+;;; (require-package 'flycheck)
+
+(map 'vector (lambda (package) (require-package package)) (vector "flycheck" "elpy"))
+
 (fullframe list-packages quit-window)
 
 (provide 'init-packages)
