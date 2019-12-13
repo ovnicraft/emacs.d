@@ -173,8 +173,14 @@
               ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 
-(setq org-directory "~/org")
-(setq org-default-notes-file "~/org/refile.org")
+(setq org-directory "~/orgs")
+(setq org-default-notes-file "~/orgs/refile.org")
+
+(setq
+ org-refile-targets (quote ((nil :maxlevel . 1)
+ 			      (org-agenda-files :maxlevel . 1)))
+ ;; Org agenda files read from here
+ org-agenda-files (list org-directory))
 
 ;; I use C-c c to start capture mode
 (global-set-key (kbd "C-c c") 'org-capture)

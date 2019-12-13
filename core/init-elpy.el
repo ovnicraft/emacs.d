@@ -20,6 +20,10 @@
 
 (setenv "WORKON_HOME" (expand-file-name "~/.virtualenvs"))
 
+(when (load "flycheck" t t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
 (add-hook 'python-mode-hook 'blacken-mode)
 
 (pyvenv-workon "dev")

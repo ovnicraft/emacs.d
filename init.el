@@ -28,6 +28,7 @@
 (require 'init-elpy)
 (require 'init-whitespace)
 (require 'init-nxml)
+(require 'init-deft)
 
 (provide 'init)
 
@@ -40,7 +41,7 @@
  '(column-number-mode t)
  '(package-selected-packages
    (quote
-    (idomenu ido-ubiquitous dired-sort dired+ quelpa-use-package use-package-el-get yaml-mode whitespace-cleanup-mode use-package smex po-mode org-plus-contrib org-mime fullframe flycheck elpy bbdb))))
+    (deft idomenu ido-ubiquitous dired-sort dired+ quelpa-use-package use-package-el-get yaml-mode whitespace-cleanup-mode use-package smex po-mode org-plus-contrib org-mime fullframe flycheck elpy bbdb))))
 
 
 (custom-set-faces
